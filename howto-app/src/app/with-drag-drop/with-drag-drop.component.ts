@@ -24,7 +24,8 @@ export class WithDragDropComponent implements OnInit , OnDestroy {
     );
     this.subs.add(this.dragulaService.drop("DRAGULA_GROUP1")
       .subscribe(({ name, el, target, source, sibling }) => {
-        console.log(`drop in groupName=${name} of el with id=${el.id} `)
+        console.log(`drop in groupName=${name} of el with id=${el.id} `);
+        console.log(`drop source_id=${source.id} et target_id=${target.id} `)
       })
     );
 
