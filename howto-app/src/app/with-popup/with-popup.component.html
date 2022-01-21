@@ -1,0 +1,43 @@
+<p>with-popup (modal)</p>
+dataSample.text = <span [style.color]="dataSample.color">{{dataSample.text}}</span><br/>
+
+<button class="btn-primary" 
+        (click)="openModal(modal1Template)">changeTextModal</button>
+&nbsp;
+<button class="btn-primary" 
+        (click)="openSmallModal(modal2Template)">changeColorModal</button>
+
+<!-- start content of popup -->
+<ng-template #modal1Template >
+    <div class="modal-header bg-secondary">
+      <h4 class="modal-title text-white">changeTextModal</h4>
+      <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+         <label>dataSample.text:</label>
+         <input [(ngModel)]="dataSample.text"/>
+         <br/>
+         <button (click)="closeModal()">close</button>
+    </div>
+</ng-template>
+<!-- end content of popup -->
+
+<!-- start content of popup -->
+<ng-template #modal2Template >
+    <div class="modal-header bg-secondary">
+      <h4 class="modal-title text-white">changeColorModal</h4>
+      <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <label>dataSample.color:</label>
+         <select  [(ngModel)]="dataSample.color"> 
+             <option>black</option><option>red</option><option>green</option><option>blue</option>
+         </select> <br/>
+         <button (click)="closeModal()">close</button>
+    </div>
+</ng-template>
+<!-- end content of popup -->

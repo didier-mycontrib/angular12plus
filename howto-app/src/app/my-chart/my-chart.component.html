@@ -1,0 +1,32 @@
+<h3>my-chart(s)</h3>
+<div class="row">
+    <div class="col-sm-6">
+        <label>chartType (pour proportions):</label><select [(ngModel)]="monoChartType">
+            <option *ngFor="let ct of monoChartTypes">{{ct}}</option>
+        </select><br/>
+        <label>papeterie:</label><input size="6" [(ngModel)]="ventes[0]" />&nbsp;
+        <label>fruits/légumes:</label><input size="6" [(ngModel)]="ventes[1]" />&nbsp;
+        <label>autres:</label><input size="6" [(ngModel)]="ventes[2]" />&nbsp;
+        <button (click)="refreshChartVentes()">refresh</button>
+        <div class="chart-wrapper">
+            <canvas baseChart
+                [datasets]="monoChartData" 
+                [labels]="monoChartLabels" 
+                [type]="monoChartType" >
+            </canvas>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <label>chartType (pour multi-series):</label><select [(ngModel)]="multiChartType">
+            <option *ngFor="let ct of multiChartTypes">{{ct}}</option>
+        </select>
+        <div class="chart-wrapper">
+            <canvas baseChart 
+            [datasets]="multiChartData"
+            [labels]="multiChartLabels"
+            [type]="multiChartType">
+           </canvas>
+       </div>
+    </div>
+</div>
