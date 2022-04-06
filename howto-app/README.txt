@@ -23,3 +23,29 @@ dans src/polyfills.ts
 et avec ajout de dragula.scss
 et ajout de @import "dragula"; dans src/styles.scss
 ========
+npm install -s @tinymce/tinymce-angular@^5.0.0
+import { EditorModule } from '@tinymce/tinymce-angular'; 
+pour imports: [...,,EditorModule] de app.module.ts
+et
+npm install -s tinymce
+et
+ajout de { "glob": "**/*", "input": "node_modules/tinymce", "output": "/tinymce/" }
+dans partie assets:[] de angular.json
+et
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
+pour ajout de { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' } 
+dans partie providers:[] de app.module.ts
+
+
+
+
+
+
+===================
+Upgrade angular/cli et angular-app:
+
+npm uninstall -g @angular/cli
+npm cache verify
+npm install -g @angular/cli@latest
+
+puis (dans cette application):

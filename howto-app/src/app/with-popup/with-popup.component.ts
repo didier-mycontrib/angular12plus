@@ -21,7 +21,11 @@ export class WithPopupComponent implements OnInit {
               private testService : TestService) {}
 
   public testAttente(){
+    /*
     this.testService.multiRequetes$().subscribe(
+      (res:any)=>{console.log(JSON.stringify(res));}
+    );*/
+    this.testService.multiRequetesSeq$().subscribe(
       (res:any)=>{console.log(JSON.stringify(res));}
     );
   }

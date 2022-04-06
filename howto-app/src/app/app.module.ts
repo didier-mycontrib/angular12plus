@@ -14,6 +14,9 @@ import { WithPopupComponent } from './with-popup/with-popup.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { WithDragDropComponent } from './with-drag-drop/with-drag-drop.component';
 import { DragulaModule } from 'ng2-dragula';
+import { WithEditorComponent } from './with-editor/with-editor.component';
+import { EditorModule , TINYMCE_SCRIPT_SRC} from '@tinymce/tinymce-angular';
+ 
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { DragulaModule } from 'ng2-dragula';
     FooterComponent,
     MyChartComponent,
     WithPopupComponent,
-    WithDragDropComponent
+    WithDragDropComponent,
+    WithEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +35,12 @@ import { DragulaModule } from 'ng2-dragula';
     FormsModule,
     ModalModule.forRoot(),
     NgChartsModule,
-    DragulaModule.forRoot()
+    DragulaModule.forRoot(),
+    EditorModule
   ],
-  providers: [],
+  providers: [
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
