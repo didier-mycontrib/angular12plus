@@ -48,4 +48,13 @@ npm uninstall -g @angular/cli
 npm cache verify
 npm install -g @angular/cli@latest
 
+
+
+npm uninstall --save-dev @angular/cli
+npm install --save-dev @angular/cli@latest
+
+npx @angular/cli update @angular/core
+
 puis (dans cette application):
+supprimer le répertoire node_modules (à reconstruire)
+npm install
