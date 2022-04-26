@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WithEditorComponent implements OnInit {
 
+  htmlText:string="ok";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onGetText(){
+    console.log("html text=" + this.htmlText);
   }
 
 }

@@ -14,6 +14,19 @@ npm install -s ng2-charts chart.js
 avec import { NgChartsModule } from 'ng2-charts';
 et import : [ NgChartsModule , ...] dans app.module.ts
 ===========
+npm install -s leaflet
+npm install -s @types/leaflet
+npm install -s @asymmetrik/ngx-leaflet
+et ajouter ceci dans partie styles de angular.json:
+"node_modules/leaflet/dist/leaflet.css",
+Ajouter également ceci dans app.module.ts :
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+...
+imports: [
+	...,
+	LeafletModule
+]
+===========
 npm install -s ng2-dragula
 (pour drag & drop)
 avec import : [ DragulaModule.forRoot()  , ...] dans app.module.ts

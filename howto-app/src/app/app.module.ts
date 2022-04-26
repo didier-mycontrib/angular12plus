@@ -16,7 +16,8 @@ import { WithDragDropComponent } from './with-drag-drop/with-drag-drop.component
 import { DragulaModule } from 'ng2-dragula';
 import { WithEditorComponent } from './with-editor/with-editor.component';
 import { EditorModule , TINYMCE_SCRIPT_SRC} from '@tinymce/tinymce-angular';
- 
+import { WithLeafletComponent } from './with-leaflet/with-leaflet.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet'; 
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EditorModule , TINYMCE_SCRIPT_SRC} from '@tinymce/tinymce-angular';
     MyChartComponent,
     WithPopupComponent,
     WithDragDropComponent,
-    WithEditorComponent
+    WithEditorComponent,
+    WithLeafletComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { EditorModule , TINYMCE_SCRIPT_SRC} from '@tinymce/tinymce-angular';
     ModalModule.forRoot(),
     NgChartsModule,
     DragulaModule.forRoot(),
-    EditorModule
+    EditorModule , 
+    LeafletModule
   ],
   providers: [
     { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
