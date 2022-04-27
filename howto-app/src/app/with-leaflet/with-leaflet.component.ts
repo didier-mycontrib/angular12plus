@@ -60,8 +60,17 @@ export class WithLeafletComponent implements OnInit {
 
   //tileLayerUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';//selon langue de chaque pays
   tileLayerUrl = 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png';//version francaise
-
-
+  topoTileLayerUrl = 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'; //fond de carte topographique (relief)
+  //tileLayerUrl = 'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png'; //transports (aeroports, routes)
+  //tileLayerUrl = "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png";
+  //tileLayerUrl = "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png";
+  //tileLayerUrl = "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png"; //pistes cyclables
+  //tileLayerUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}";
+  satTileLayerUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"; //images satelites
+  //tileLayerUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}";
+  //tileLayerUrl = "https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE=normal&TILEMATRIXSET=PM&FORMAT=image/png&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"; //carte IGN , niveau de zoom différent selon pays
+  //tileLayerUrl = "https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE=normal&TILEMATRIXSET=PM&FORMAT=image/jpeg&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"; //carte IGN , images satelite
+  
   //NB: options is just used for initialization 
   options = {
     layers: [
@@ -70,6 +79,17 @@ export class WithLeafletComponent implements OnInit {
     zoom: this.zoom,
     center: latLng(this.centerCoord)
   };
+
+  layersControl = {
+    baseLayers: {
+      'OpenStreetMap/fr': tileLayer(this.tileLayerUrl, { maxZoom: 18, attribution: 'fr' }),
+      'satellite': tileLayer(this.satTileLayerUrl, { maxZoom: 18, attribution: 'ArcGIS' }),
+      'topo (relief)': tileLayer(this.topoTileLayerUrl, { maxZoom: 18, attribution: 'topo' })
+    },
+    overlays: {
+     
+    }
+  }
 
 /*
   myLayers = [
@@ -83,7 +103,13 @@ export class WithLeafletComponent implements OnInit {
   refreshMyLayer(){
     this.myLayers = [];
     for(let loc of this.selectedLocations){
-      this.myLayers.push( circle([ loc.centerCoord[0], loc.centerCoord[1] ], { radius: 5000 }));
+      this.myLayers.push( circle([ loc.centerCoord[0], loc.centerCoord[1] ], 
+                                 { radius: 5000 , 
+                                  color : 'red' , 
+                                  fillColor: '#f03', 
+                                  fillOpacity: 0.2,})
+                              .bindTooltip(<string> loc.name)
+                          );
     }
   }
 

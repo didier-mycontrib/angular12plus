@@ -1,0 +1,124 @@
+<h3>angular et bootstrap5 dynamique (sans jquery)</h3>
+<pre>
+    avec "bootstrap": "^5.1.3" dans package.json 
+    et avec dans angular.json :
+    "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss"
+            ],
+    "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
+</pre>
+<div class="m-2 p-1">
+    <ul class="nav nav-pills"> <!-- nav-tabs or nav-pills -->
+        <li class="nav-item"><a class="nav-link active" href="#id_tabAddition" data-bs-toggle="tab">addition</a></li>
+        <li class="nav-item" ><a class="nav-link" href="#id_tabTva" data-bs-toggle="tab">calcul tva</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="id_tabAddition" class="tab-pane show active p-1 border border-primary">
+        <form>
+          <div class="form-group row mb-2">
+            <label class="control-label col-sm-3 text-sm-end">a:</label>
+            <div class="col-sm-9">
+              <input name="a" class="form-control" [(ngModel)]="a" />
+            </div>
+          </div>
+          <div class="form-group row mb-2">
+            <label class="control-label col-sm-3 text-sm-end">b:</label>
+            <div class="col-sm-9">
+                <input name="b" class="form-control" [(ngModel)]="b" />
+            </div>
+          </div>
+          <div class="form-group row mb-2 ">
+            <div class="col-sm-9 offset-sm-3">
+            <input type="button" class="btn-primary" value="addition" 
+                (click)="onCalculAdd()"/>
+            </div>
+          </div>
+          <div class="form-group row mb-2 ">
+            <label class="control-label col-sm-3 text-sm-end">a+b:</label>
+            <div class="col-sm-9">
+               <span>{{resAdd}}</span>
+            </div>
+          </div>
+        </form>
+        </div><!--end of id_tabAddition -->
+        <div id="id_tabTva" class="tab-pane  p-1 border border-primary">
+        <form>
+          <div class="form-group row mb-2 ">
+            <label class="control-label col-sm-3 text-sm-end">ht:</label>
+            <div class="col-sm-9">
+               <input name="ht" class="form-control" [(ngModel)]="ht" />
+           </div>
+          </div>
+          <div class="form-group row mb-2 "> 
+            <label class="control-label col-sm-3 text-sm-end">taux tva (%):</label>
+            <div class="col-sm-9">
+                <input name="tauxTvaPct" class="form-control" [(ngModel)]="tauxTvaPct" />
+            </div>
+          </div>
+          <div class="form-group row mb-2 ">
+            <div class="col-sm- offset-sm-3">
+              <input type="button" class="btn-primary" value="calculer tva et ttc" 
+                (click)="onCalculTvaEtTtc()"/>
+            </div>
+          </div>
+          <div class="form-group row mb-2 ">
+            <label class="control-label col-sm-3 text-sm-end">tva:</label> 
+            <div class="col-sm-9"><span>{{tva}}</span></div>
+          </div>
+          <div class="form-group row mb-2 ">
+            <label class="control-label col-sm-3 text-sm-end">ttc: </label> 
+            <div class="col-sm-9"><span>{{ttc}}</span></div>
+          </div>
+        </form>
+        </div><!--end of id_tabTva -->				
+    </div>	<!--end of tab-content -->
+  </div><!--end of m-2 p-1 -->
+
+  <hr/>
+
+  <div class="card m-2">
+    <div class="card-header bg-primary">
+          <a data-bs-toggle="collapse" class="text-light"
+           data-bs-target="#collapse1">Collapsible panel (when click on title)</a>
+      </div>
+    <div id="collapse1" class="collapse">
+      <div class="card-body">Panel Body</div>
+      <!-- <div class="panel-footer">Panel Footer</div> -->
+    </div>
+  </div>
+
+<hr/>
+
+   
+   <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</button> &nbsp;
+
+
+   <!-- Trigger the modal with a link -->
+<a href="#" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</a>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-sm"> <!-- different sizes : modal-sm , medium by default , modal-lg -->
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+		<p>Some text2 in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

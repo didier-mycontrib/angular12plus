@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     <div class="card  m-2">
         <div class="card-header text-white bg-primary">parameters</div>  
         <div class="card-body" >
@@ -23,12 +23,12 @@
             </select><br/>
         </div>
     </div> <!-- end of options card  -->
-  </div> <!-- end of col-sm-6 -->
-  <div class="col-sm-6">
+  </div> <!-- end of col-sm-4 -->
+  <div class="col-sm-8">
     <div class="card m-2">
     <div class="card-header text-white bg-primary">Map with leaflet</div>  
     <div class="card-body" >
-            <div style="height: 300px;width:100%;"
+            <div style="height: 500px;width:100%;"
             leaflet 
             [leafletOptions]="options"
             [leafletZoom]="zoom"
@@ -36,12 +36,13 @@
             (leafletZoomChange)="onZoomChange($event)"
             (leafletCenterChange)="onCenterChange($event)"
             [leafletLayers]="myLayers"
+            [leafletLayersControl]="layersControl"
             >
               <!-- NB: after initialization , changes applyed to options are ignored .
                    need to bind zoom and center to dynamically apply changes -->
             </div>
     </div>
    </div> <!-- end of card -->
-  </div> <!-- end of col-sm-6 -->
+  </div> <!-- end of col-sm-8 -->
 </div> <!-- end of row -->
 

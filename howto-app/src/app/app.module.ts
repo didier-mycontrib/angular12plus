@@ -15,9 +15,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { WithDragDropComponent } from './with-drag-drop/with-drag-drop.component';
 import { DragulaModule } from 'ng2-dragula';
 import { WithEditorComponent } from './with-editor/with-editor.component';
-import { EditorModule , TINYMCE_SCRIPT_SRC} from '@tinymce/tinymce-angular';
+import { EditorModule } from '@tinymce/tinymce-angular';
 import { WithLeafletComponent } from './with-leaflet/with-leaflet.component';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet'; 
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { WithDynBs5Component } from './with-dyn-bs5/with-dyn-bs5.component'; 
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     WithPopupComponent,
     WithDragDropComponent,
     WithEditorComponent,
-    WithLeafletComponent
+    WithLeafletComponent,
+    WithDynBs5Component
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,6 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     LeafletModule
   ],
   providers: [
-    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
   ],
   bootstrap: [AppComponent]
 })
