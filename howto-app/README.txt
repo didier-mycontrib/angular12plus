@@ -1,9 +1,11 @@
 Application angular "how-to" 
 exemples de technologies intégrées (chart , map , ....)
 ============
-npm install -s bootstrap 
+npm install -s bootstrap
+et eventuellement npm install -s bootstrap-icons
 (en version 5... en 2022)
 avec  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+et eventuellement "node_modules/bootstrap-icons/font/bootstrap-icons.css"
 dans partie "styles": [ ] de angular.json (près ligne 34)
 ==========
 npm install -s ngx-bootstrap 
