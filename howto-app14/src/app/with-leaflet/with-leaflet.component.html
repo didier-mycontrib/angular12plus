@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card  m-2">
+        <div class="card-header text-white bg-primary">parameters</div>  
+        <div class="card-body" >
+            <label>center:&nbsp;</label>
+            <select [(ngModel)]="selectedLocation"  (ngModelChange)="onNewLocation()">
+                <option *ngFor="let loc of locations" [ngValue]="loc">{{loc.name}}</option>
+            </select><br/>
+            <label>lat:&nbsp;</label>
+            <input type="text" [value]="centerCoord[0]" #latInput
+                   (keydown.enter)="onNewLat(latInput.value)" /><br/>
+            <label>lng:&nbsp;</label>
+            <input type="text" [value]="centerCoord[1]" #lngInput
+                          (keydown.enter)="onNewLng(lngInput.value)" /><br/>
+            <label>zoom:&nbsp;</label>
+            <select [(ngModel)]="zoom">
+              <option *ngFor="let z of zoomLevels" [ngValue]="z">{{z}}</option>
+          </select><br/>
+          <label>villes sélectionnées:&nbsp;</label> 
+             <select multiple size="8" [(ngModel)]="selectedLocations" (ngModelChange)='refreshMyLayer()'>
+                 <option *ngFor="let loc of frenchLocations" [ngValue]="loc">{{loc.name}}</option>
+            </select><br/>
+        </div>
+    </div> <!-- end of options card  -->
+  </div> <!-- end of col-sm-4 -->
+  <div class="col-sm-8">
+    <div class="card m-2">
+    <div class="card-header text-white bg-primary">Map with leaflet</div>  
+    <div class="card-body" >
+            <div style="height: 500px;width:100%;"
+            leaflet 
+            [leafletOptions]="options"
+            [leafletZoom]="zoom"
+            [leafletCenter]="center"
+            (leafletZoomChange)="onZoomChange($event)"
+            (leafletCenterChange)="onCenterChange($event)"
+            [leafletLayers]="myLayers"
+            [leafletLayersControl]="layersControl"
+            >
+              <!-- NB: after initialization , changes applyed to options are ignored .
+                   need to bind zoom and center to dynamically apply changes -->
+            </div>
+    </div>
+   </div> <!-- end of card -->
+  </div> <!-- end of col-sm-8 -->
+</div> <!-- end of row -->
+
