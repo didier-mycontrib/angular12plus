@@ -1,0 +1,11 @@
+<div class="my-menu-item" (mouseenter)="onSelectMenu()" (click)="onNav(menuDef)"
+     [class.selected]="menuDef === selectedMenuDef">{{menuDef.label}}</div>
+<div *ngIf="menuDef === selectedMenuDef">
+    <div class="my-menu-item" 
+    *ngFor="let smd of menuDef.children"
+    (mouseenter)="onSelectSubMenu(smd)"
+    (click)="onNav(smd)" >
+         &nbsp;&nbsp;&nbsp;&nbsp;
+         <span [class.sub_selected]="smd === selectedSubMenuDef">{{smd.label}}</span>
+    </div>
+</div>

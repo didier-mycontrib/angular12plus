@@ -1,0 +1,23 @@
+<div class="mainSideNav">
+  <mat-nav-list> 
+    <a  mat-list-item  
+       *ngFor="let md of menuDefs"  (click)="onNav(md)" >{{md.label}}</a>
+      <!-- 
+       <button mat-list-item>
+        <mat-icon inline="true">dialpad</mat-icon> <span>Redial</span>
+      </button>
+      -->
+       <a mat-list-item [matMenuTriggerFor]="menuSuite">autres...</a>
+ </mat-nav-list>
+
+ <mat-menu #menuSuite="matMenu">
+       <a mat-menu-item [matMenuTriggerFor]="subMenu">aaa...</a>
+       <a mat-menu-item >bbb</a>
+</mat-menu>
+
+<mat-menu #subMenu="matMenu">
+  <a mat-menu-item >a1</a>
+  <a mat-menu-item >b1</a>
+</mat-menu>
+
+</div>

@@ -1,0 +1,16 @@
+.my-menu-item {
+    color : blue;
+    height:  1.2em !important;
+    margin-bottom: 0.2em;
+    text-align: left;
+}
+
+.selected {
+    background-color: bisque;
+    font-weight: bold;
+}
+
+.sub_selected {
+    font-weight: bold;
+    text-decoration: underline;
+}

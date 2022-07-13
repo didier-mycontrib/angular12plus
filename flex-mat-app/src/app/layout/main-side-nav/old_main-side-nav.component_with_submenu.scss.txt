@@ -1,0 +1,27 @@
+@import "../../common/css/common-layout.css" ;
+
+.mainSideNav { 
+    /*background-color: lightgrey;*/
+    min-height: 150px ;
+}
+
+.selected {
+    background-color: bisque;
+}
+
+.main-level-menu{
+   border : 1px solid red;
+}
+
+.sub-level-menu{
+    border : 1px solid blue;
+    padding-left: 0.8em;
+}
+
+
+.my-menu-item {
+    color : blue;
+    height:  1.2em !important;
+    margin-bottom: 0.2em;
+    text-align: left;
+}

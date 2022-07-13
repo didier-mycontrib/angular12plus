@@ -1,0 +1,44 @@
+@import "common-media-query.css";
+
+.flexColumnNoWrap {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap : nowrap;
+}
+
+.flexRowNoWrap {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap : nowrap;
+    align-items : center;
+}
+
+.flexColumnWrap {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap : wrap;
+}
+
+.flexRowWrap {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap : wrap;
+    align-items : center;
+}
+
+.flexItem {
+    flex: 1 1 auto;
+	
+}
+
+.left-text-align {
+    text-align: left;
+}
+
+.right-text-align {
+    text-align: right;
+}
+
+.center-text-align {
+    text-align: center;
+}

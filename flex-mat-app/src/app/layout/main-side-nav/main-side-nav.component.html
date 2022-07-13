@@ -1,0 +1,10 @@
+<div class="mainSideNav ">
+    <div class="main-level-menu" (mouseleave)="selectedMenuDef=null" >
+       <app-menu-item  *ngFor="let md of menuDefs" 
+              (selectedMenuChange)="onSelectedMenuChange($event)"
+              (afterNav)="onAfterNav($event)"
+              [menuDef]="md" 
+              [selectedMenuDef]="selectedMenuDef" >
+        </app-menu-item> 
+    </div>
+</div>

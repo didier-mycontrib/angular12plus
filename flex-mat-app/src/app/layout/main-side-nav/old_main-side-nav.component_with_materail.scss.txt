@@ -1,0 +1,28 @@
+.mainSideNav { 
+    /*background-color: lightgrey;*/
+    min-height: 150px ;
+}
+
+
+.mat-list-item {
+    color : blue;
+    height:  1.2em !important;
+    /*
+    margin : 2px;
+    background-color: lightgrey;
+    */
+    border : 1px solid red;
+}
+
+/*
+::ng-deep .mat-menu-content {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+*/
+
+.mat-menu-item {
+    color : blue;
+    height:  1.6em !important;
+    line-height:1.6em !important;
+}
