@@ -1,0 +1,25 @@
+<div class="mainSideNav flexRowNoWrap"
+     (mouseleave)="onResetMenuSelection()">
+
+  <!-- main level menu , always visible -->
+    <div class="flexItem main-level-menu" >
+       <div class="my-menu-item" *ngFor="let md of menuDefs; let i=index"   
+              (click)="onNav(md)" 
+              [class.selected]="md === selectedMenuDef"
+              (mouseenter)="onSubMenu(md,i)" >{{md.label}}
+        </div> 
+     
+    </div>
+
+     <!-- sub level menu , visible or not --> 
+    <div class="flexItem sub-level-menu" 
+         [style.display]="subMenuDefs?'block':'none'" >
+        <div  [style.paddingTop.em]="subMenuPaddingTop"></div>
+        <div *ngFor="let smd of subMenuDefs"  
+        class="my-menu-item" 
+        (click)="onNav(smd)" 
+        [class.selected]="smd === selectedSubMenuDef"
+        (mouseenter)="selectedSubMenuDef=smd">{{smd.label}}
+        </div> 
+    </div>
+</div>

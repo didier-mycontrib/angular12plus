@@ -1,0 +1,35 @@
+@import "../common/css/mylayout-common-layout.css" ;
+
+.flexRowNoWrap {
+    align-items : stretch !important; /* redefinition , not center nor start nor end here */
+}
+
+.mainSideNav { 
+    /*background-color: lightgrey;*/
+    min-height: 150px ;
+}
+
+.selected {
+    background-color: bisque;
+    font-weight: bold;
+}
+
+.main-level-menu{
+  /* border : 1px solid red;*/
+  padding-left: 0em;
+  padding-right: 0.5em;
+}
+
+.sub-level-menu{
+    border-left : 1px solid blue;
+    padding-left: 0.5em;
+    padding-right: 0.2em;
+}
+
+
+.my-menu-item {
+    color : blue;
+    height:  1.2em !important;
+    margin-bottom: 0.2em;
+    text-align: left;
+}

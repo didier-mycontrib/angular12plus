@@ -1,0 +1,22 @@
+<div class="flexAllInColumnDir little-margin">
+    <header id="mainStickyHeader" class="stickyHeaderFirstInFlexCol" >
+         <mylayout-sticky-header [title]="title" (togglerMenu)="onTogglerMenu()"></mylayout-sticky-header> <!-- always visible -->
+    </header>
+    <div class="remainingContentInFlexCol">
+      <mat-sidenav-container >
+        <!-- mode = side , push (auto-close when click on main content) or
+                          over (idem as push but over / no slide )-->
+        <mat-sidenav #matSideNav [mode]="sideNavMode" [opened]="openedSideNav"
+            (mouseenter)="onMenuMouseEnterInMainSideNav()">
+            <mylayout-main-side-nav id="main-side-nav" [menuDefs]="mainMenuDefs" (afterNav)="onAfterNav($event)"></mylayout-main-side-nav> <!-- with main/complete menu -->
+        </mat-sidenav>
+        <mat-sidenav-content class="main-zone">
+             <mylayout-main-content></mylayout-main-content> <!-- with router-outlet -->
+      </mat-sidenav-content>
+      </mat-sidenav-container>
+      <mylayout-legal-footer></mylayout-legal-footer> <!-- no sticky -->
+    </div>
+    <footer class="stickyFooterLastInFlexCol noDisplayForlargeWidth">
+         <mylayout-sticky-footer></mylayout-sticky-footer> <!-- mobile only , contains quick-menu for mobile -->
+    </footer>
+  </div>

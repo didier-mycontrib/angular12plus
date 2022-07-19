@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { MenuDef } from './common/data/menu-def';
+import { MenuDef } from '../my-layout/common/data/menu-def';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +11,14 @@ export class AppComponent {
 
   appMenuDefs : MenuDef[] = [
     new MenuDef("home","/ngr-home"),
-    new MenuDef("xxxxxxxxx","/ngr-xx"),
-    new MenuDef("login/logout","/ngr-loginLogout"),
-    new MenuDef("mysubmenu1",null,[
-      new MenuDef("home","/ngr-home"),
-      new MenuDef("login/logout","/ngr-loginLogout"),
+    new MenuDef("public ...",null,[
+      new MenuDef("demo","/ngr-demo"),
+      new MenuDef("basic","/ngr-basic"),
     ]),
-    new MenuDef("admin",null,[
-      new MenuDef("adm1","/ngr-adm1"),
-      new MenuDef("adm2","/ngr-adm2"),
+    new MenuDef("login-out","/ngr-login-out"),
+    new MenuDef("admin ...",null,[
+      new MenuDef("admin xx","/ngr-admin-xx"),
+      new MenuDef("admin yy","/ngr-admin-yy"),
     ])
   ];
 

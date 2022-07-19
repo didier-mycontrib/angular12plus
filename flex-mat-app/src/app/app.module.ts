@@ -4,38 +4,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StickyHeaderComponent } from './layout/sticky-header/sticky-header.component';
-import { StickyFooterComponent } from './layout/sticky-footer/sticky-footer.component';
-import { LegalFooterComponent } from './layout/legal-footer/legal-footer.component';
-import { MainSideNavComponent } from './layout/main-side-nav/main-side-nav.component';
-import { MainContentComponent } from './layout/main-content/main-content.component';
-import { QuickMenuComponent } from './layout/quick-menu/quick-menu.component';
-import { QuickToolbarComponent } from './layout/quick-toolbar/quick-toolbar.component';
+
 import { FormsModule } from '@angular/forms';
 import { ImportMaterialModule } from './common/imports/import-material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { LayoutComponent } from './layout/layout.component';
-import { LayoutModule } from '@angular/cdk/layout';
+
 import { HomeComponent } from './home/home.component';
-import { LoginLogoutComponent } from './login-logout/login-logout.component';
-import { StatusBarComponent } from './layout/status-bar/status-bar.component';
-import { MenuItemComponent } from './layout/main-side-nav/menu-item/menu-item.component';
+import { LoginOutComponent } from './login-out/login-out.component';
+import { MyLayoutModule } from 'src/my-layout/my-layout.module';
+import { BasicComponent } from './basic/basic.component';
+import { DemoComponent } from './demo/demo.component';
+import { AdminXxComponent } from './admin-xx/admin-xx.component';
+import { AdminYyComponent } from './admin-yy/admin-yy.component';
+import { MyComponentsModule } from 'src/my-components/my-components-module';
+import { DeviseComponent } from './devise/devise.component';
+import { MyCrudModule } from 'src/my-crud/my-crud-module';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StickyHeaderComponent,
-    StickyFooterComponent,
-    LegalFooterComponent,
-    MainSideNavComponent,
-    MainContentComponent,
-    QuickMenuComponent,
-    QuickToolbarComponent,
-    LayoutComponent,
     HomeComponent,
-    LoginLogoutComponent,
-    StatusBarComponent,
-    MenuItemComponent
+    LoginOutComponent,
+    BasicComponent,
+    DeviseComponent,
+    DemoComponent,
+    AdminXxComponent,
+    AdminYyComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +39,10 @@ import { MenuItemComponent } from './layout/main-side-nav/menu-item/menu-item.co
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    LayoutModule,
-    ImportMaterialModule
+    ImportMaterialModule,
+    MyLayoutModule,
+    MyComponentsModule,
+    MyCrudModule
   ],
   providers: [],
   bootstrap: [AppComponent]
