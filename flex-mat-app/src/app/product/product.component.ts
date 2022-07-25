@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ObjectHelper } from 'src/my-common/helper/ObjectHelper';
-import { GenericCrudAbstractContextHelper } from 'src/my-crud/abstract/GenericCrudAbstractContextHelper';
-import { GenericCrudHelper } from 'src/my-crud/abstract/GenericCrudHelper';
-import { GenericCrudContext } from 'src/my-crud/GenericCrudContext';
+import { ObjectHelper } from 'd2f-ngx-commons';
+import { GenericCrudAbstractContextHelper , GenericCrudHelper , GenericCrudContext } from 'd2f-ngx-crud';
 import { Product } from '../common/data/product';
 import { ProductHelper } from '../common/helper/product-helper';
 import { ProductMemService } from '../common/service/product-mem.service';

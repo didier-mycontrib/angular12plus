@@ -1,0 +1,55 @@
+<div class="flexRowWrap mb-1 mt-1">
+    <div class="flexItem m-1" >
+      <div class="mat-card">
+       <div class="mat-card-header text-white bg-primary">List of {{genericCrudContext!.entityTypeName}}</div>
+       <div class="mat-card-content  p-1">
+       <div class="tableContainerWithFixHead">
+       <table class="table" border="1">
+          <thead>
+           <tr>
+              <th *ngFor="let key of  essentialKeysArray()">{{key}}</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let d of genericCrudContext!.tabObjects ; let i=index"
+           (click)="onSelectObject(d)"
+           [class.selected]="d==selectedObject">
+           <td *ngFor="let val of objectEssentialValuesArray(d)">{{val}}</td>
+          </tr>
+        </tbody>
+       </table> <!-- end of table -->
+      </div><!-- end of tableContainerWithFixHead -->
+       <b>{{message}}</b>
+       </div> <!-- end of mat-card-content -->
+      </div><!-- end of mat-card -->
+     </div> <!-- end of flexItem -->
+     <div class="flexItem m-1" >
+       <div class="mat-card">
+       <div class="mat-card-header text-white bg-primary">selected {{genericCrudContext!.entityTypeName}} ({{mode}})</div>
+       <div class="mat-card-content p-1">
+       <form #formObject="ngForm">  
+           <div class="flexRowWrap" *ngFor="let key of objectKeysArray(objectTemp)" > 
+           <label class="f-align">{{key}}:</label>
+           <div class="f-align">
+               <input *ngIf="!isNoEditableId(key)" [name]="key" class="f-max-size  mb-1" [(ngModel)]="objectTemp[key]" required />
+               <label *ngIf="isNoEditableId(key)"   class="f-max-size  mb-1">{{objectTemp[key]}}</label>
+           </div>       
+           </div><!-- end of flexRowWrap -->
+           <div class="flexRowWrap">
+               <div class="f-align">
+                    <button (click)="onUpdate()" class="btn-primary" 
+                        [style.visibility]="(mode=='existingOne')?'visible':'hidden'"
+                        [disabled]="!formObject.form.valid"  >
+                        update <i class="bi-save"></i></button> &nbsp;
+                    <button (click)="onNew()" class="btn-primary"> new </button>  &nbsp;
+                    <button (click)="onAdd()" [disabled]="!formObject.form.valid"
+                            [style.visibility]="(mode=='newOne')?'visible':'hidden'" 
+                            class="btn-primary"> add </button> &nbsp;
+                    <button (click)="onDelete()" [style.visibility]="(mode=='existingOne')?'visible':'hidden'" class="btn-danger"> delete </button>
+               </div> 
+           </div><!-- end of flexRowWrap -->
+       </form><!-- end of form -->
+       </div> <!-- end of mat-card-content -->
+      </div><!-- end of mat-card -->
+     </div> <!-- end of flexItem -->
+   </div><!-- end of main flexRowNoWrap -->

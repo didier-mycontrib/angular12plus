@@ -20,6 +20,10 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "d2f-ngx-commons": "^0.0.1",
+    "d2f-ngx-components": "^0.0.1",
+    "d2f-ngx-crud": "^0.0.1",
+    "d2f-ngx-layout": "^0.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

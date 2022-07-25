@@ -1,1 +1,46 @@
-<p>login-out works!</p>
+<h2>login-out</h2>
+<hr/>
+<div *ngIf="userSession.isConnected()">
+   <h3 class="connected">you are connected</h3>
+   <p *ngIf="userSession.userId && userSession.userId != '' && userSession.userId != '?'">userId: <span >{{userSession.userId}}</span></p>
+   <p>userName: <span class="highlight">{{userSession.userName}}</span></p>
+   <p *ngIf="userSession.userRoles.length >0" >userRoles: <span class="highlight">{{userSession.userRoles.join(',')}}</span></p>
+   <p *ngIf="userSession.authToken">authToken: <span>{{userSession.authToken}}</span></p>
+   <p *ngIf="userSession.userDetails">details: <span>{{userSession.userDetails}}</span></p>
+   <p><button (click)="onLogout()">logout</button></p>
+</div>
+
+<div *ngIf="!userSession.isConnected()">
+    <h3 class="disconnected">you are not yet connected</h3>
+    <form #formLogin="ngForm">
+        <div class="flexRowWrap">
+            <label class="f-align">username:</label>
+            <div class="f-align">
+                <input  name="username" class="f-max-size  mb-1" [(ngModel)]="login.username" required />
+            </div>
+        </div>
+        <div class="flexRowWrap">
+            <label class="f-align">password:</label>
+            <div class="f-align">
+                <input  name="password" class="f-max-size  mb-1" [(ngModel)]="login.password"  />
+            </div>
+        </div>
+        <div class="flexRowWrap">
+            <label class="f-align">roles:</label>
+            <div class="f-align">
+                <input  name="roles" class="f-max-size  mb-1" [(ngModel)]="login.roles"  />
+            </div>
+        </div>
+        <div class="flexRowWrap">
+            <label class="f-align"></label>
+            <div class="f-align">
+              <button [disabled]="!formLogin.form.valid" (click)="onLogin()">login</button>
+            </div>
+        </div>
+    </form>
+  
+</div>
+<!--
+<hr/>
+<p>userSession: {{userSession | json}}</p>
+-->

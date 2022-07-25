@@ -1,4 +1,4 @@
-import { ObjectHelper } from "src/my-common/helper/ObjectHelper";
+import { ObjectHelper } from "d2f-ngx-commons";
 import { Devise } from "../data/devise";
 
 export class DeviseHelper implements ObjectHelper<Devise,String> {

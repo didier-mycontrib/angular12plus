@@ -1,4 +1,4 @@
-import { ObjectHelper } from "src/my-common/helper/ObjectHelper";
+import { ObjectHelper } from "d2f-ngx-commons"; 
 import { Product } from "../data/product";
 
 export class ProductHelper implements ObjectHelper<Product,String|null> {

@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { MenuDef } from '../my-layout/common/data/menu-def';
+import { MenuDef } from 'd2f-ngx-layout';
 
 @Component({
   selector: 'app-root',

@@ -11,14 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home/home.component';
 import { LoginOutComponent } from './login-out/login-out.component';
-import { MyLayoutModule } from 'src/my-layout/my-layout.module';
+import { D2fNgxLayoutModule } from 'd2f-ngx-layout';
 import { BasicComponent } from './basic/basic.component';
 import { DemoComponent } from './demo/demo.component';
 import { AdminXxComponent } from './admin-xx/admin-xx.component';
 import { AdminYyComponent } from './admin-yy/admin-yy.component';
-import { MyComponentsModule } from 'src/my-components/my-components-module';
+import { D2fNgxComponentsModule } from 'd2f-ngx-components';
 import { DeviseComponent } from './devise/devise.component';
-import { MyCrudModule } from 'src/my-crud/my-crud-module';
+import { D2fNgxCrudModule } from 'd2f-ngx-crud';
 import { ProductComponent } from './product/product.component';
 
 @NgModule({
@@ -40,9 +40,9 @@ import { ProductComponent } from './product/product.component';
     FormsModule,
     HttpClientModule,
     ImportMaterialModule,
-    MyLayoutModule,
-    MyComponentsModule,
-    MyCrudModule
+    D2fNgxLayoutModule,
+    D2fNgxComponentsModule,
+    D2fNgxCrudModule
   ],
   providers: [],
   bootstrap: [AppComponent]

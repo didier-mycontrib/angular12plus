@@ -1,0 +1,20 @@
+@import "/assets/css/d2f-common-layout.css";
+.quick-menu {  background-color: chartreuse;
+              width: 100%;}
+.my-button { 
+    margin: 1px;
+    border: 1px solid;
+}
+
+.boutonRondCarre {
+    border-radius: 6px 0 6px 0;
+    font: bold 10px Verdana;
+    background: #f5f5f5;
+    /*
+    
+    border: none;
+    color: #555;
+    padding: 6px 0 6px 0;
+    border: 1px solid #ccc;
+    */
+  }

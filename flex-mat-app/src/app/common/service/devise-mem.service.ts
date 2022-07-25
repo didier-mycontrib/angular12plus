@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GenericMemCrudService } from 'src/my-common/service/generic-mem-crud-service';
+import { GenericMemCrudService } from 'd2f-ngx-commons';
 import { Devise } from '../data/devise';
 
 @Injectable({

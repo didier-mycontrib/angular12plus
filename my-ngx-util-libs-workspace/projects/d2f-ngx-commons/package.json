@@ -1,0 +1,18 @@
+{
+  "name": "d2f-ngx-commons",
+  "version": "0.0.1",
+  "author" : "didier defrance",
+  "description" : "commons utilities (classes , services , helpers, css) for angular projects" ,
+  "repository" : {
+      "type" : "git" ,
+      "url" : "https://github.com/didier-mycontrib/angular12plus"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "rxjs": "~7.5.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

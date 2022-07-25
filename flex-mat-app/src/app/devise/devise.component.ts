@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GenericCrudAbstractContextHelper } from 'src/my-crud/abstract/GenericCrudAbstractContextHelper';
-import { GenericCrudHelper } from 'src/my-crud/abstract/GenericCrudHelper';
-import { ObjectHelper } from 'src/my-common/helper/ObjectHelper';
-import { GenericCrudContext } from 'src/my-crud/GenericCrudContext';
+import { GenericCrudAbstractContextHelper , GenericCrudHelper , GenericCrudContext } from 'd2f-ngx-crud';
+import { ObjectHelper } from 'd2f-ngx-commons';
 import { Devise } from '../common/data/devise';
 import { DeviseMemService } from '../common/service/devise-mem.service';
 import { DeviseHelper } from '../common/helper/devise-helper';

@@ -1,0 +1,18 @@
+{
+  "name": "d2f-ngx-components",
+  "version": "0.0.1",
+  "author" : "didier defrance",
+  "description" : "components for angular projects (my-toggle-panel , ...)" ,
+  "repository" : {
+      "type" : "git" ,
+      "url" : "https://github.com/didier-mycontrib/angular12plus"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/material": "^14.0.4"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
