@@ -12,6 +12,9 @@ ng g library d2f-ngx-crud
 ng g library d2f-ngx-layout
 
 ========================
+ng g app test-app (just for quick testing of local css and libraries features)
+ng serve (to run from workspace directory)
+========================
 in ng-package.json of d2f-ngx-commons
 "assets": ["./assets"] for publishing assets with css
 

@@ -1,6 +1,6 @@
 {
   "name": "d2f-ngx-commons",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author" : "didier defrance",
   "description" : "commons utilities (classes , services , helpers, css) for angular projects" ,
   "repository" : {

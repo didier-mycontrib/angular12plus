@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MenuDef } from '../common/data/menu-def';
+
 
 @Component({
   selector: 'mylayout-sticky-footer',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sticky-footer.component.scss']
 })
 export class StickyFooterComponent implements OnInit {
+
+  @Input()
+  quickMenuDefs : MenuDef[] = [];
 
   constructor() { }
 

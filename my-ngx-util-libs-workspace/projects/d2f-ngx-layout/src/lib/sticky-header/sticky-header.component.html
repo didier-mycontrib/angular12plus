@@ -1,19 +1,20 @@
 <div class="my-header">
     <div class="flexColumnNoWrap">
-      <div class="flexItem">
-        <div class="flexRowNoWrap">
-            <span class="flexItem left-text-align"
+      <div class="flexItem degradeDeBleu">
+        <div class="flexRowNoWrap ">
+            <span class="flexItem left-text-align withLeftPadding"
                 (click)="onTogglerMenuClick()">
                 <mat-icon>view_headline</mat-icon>
               </span> 
-            <span class="flexItem center-text-align highlight">{{title}}</span>  
-            <mylayout-quick-toolbar (statusHelp)="onStatusHelp()"></mylayout-quick-toolbar> 
+            <span class="flexItem center-text-align highlight title">{{title}}</span>  
+            <mylayout-quick-toolbar (statusHelp)="onStatusHelp()" class="withRightPadding"></mylayout-quick-toolbar> 
         </div>
       </div>
       <div class="flexItem center-text-align ">
         <div class="flexRowNoWrap">
           <mylayout-status-bar *ngIf="showStatusBar" class="flexItem" ></mylayout-status-bar>
-          <mylayout-quick-menu class="flexItem noDisplayForSmallWidth"></mylayout-quick-menu>
+          <mylayout-quick-menu class="flexItem noDisplayForSmallWidth"
+          [quickMenuDefs]="quickMenuDefs" ></mylayout-quick-menu>
         </div>
      </div>
     </div>

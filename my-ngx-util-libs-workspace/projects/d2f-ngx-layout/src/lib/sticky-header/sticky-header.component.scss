@@ -1,3 +1,15 @@
-@import "/assets/css/d2f-common-layout.css";
-.my-header { background-color: yellow;}
+/*@import "/assets/css/d2f-common-layout.css"; now as project global css */
+.my-header { background-color: white;  }
 .highlight { font-weight: bold;}
+.title { color : blue; font-size: larger;}
+.degradeDeBleu {
+    background: linear-gradient(to bottom right , rgba(80, 67, 227, 0.9), rgba(245, 245, 245, 0.9));
+  }
+
+.withLeftPadding{
+  padding-left: 0.2em;
+}
+
+.withRightPadding{
+  padding-right: 0.2em;
+}

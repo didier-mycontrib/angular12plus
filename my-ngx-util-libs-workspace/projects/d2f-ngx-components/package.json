@@ -1,6 +1,6 @@
 {
   "name": "d2f-ngx-components",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author" : "didier defrance",
   "description" : "components for angular projects (my-toggle-panel , ...)" ,
   "repository" : {

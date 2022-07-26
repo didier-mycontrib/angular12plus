@@ -10,7 +10,7 @@
    <p><button (click)="onLogout()">logout</button></p>
 </div>
 
-<div *ngIf="!userSession.isConnected()">
+<div *ngIf="!userSession.isConnected()" class="m-1">
     <h3 class="disconnected">you are not yet connected</h3>
     <form #formLogin="ngForm">
         <div class="flexRowWrap">

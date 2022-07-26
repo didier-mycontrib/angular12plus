@@ -1,4 +1,4 @@
-@import "../common/css/app-common-layout.css";
+
 
 .highlight {
   font-weight: bold;
@@ -27,3 +27,7 @@ label.f-align {
   .f-max-size {
     width: 97%;
   }
+
+  /* plutot a la fin et plutot dans .css que dans .scss / mystere a elucider */
+  /*@import "/assets/css/d2f-common-layout.css";*/
+  /* plus nécessaire maintant car dans styles: [] de angular.json */

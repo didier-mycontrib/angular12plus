@@ -24,6 +24,29 @@ d2f-ngx-layout module : automatic responsive layout (with its own css)
 d2f-ngx-crud module : abstract crud component
 d2f-ngx-components module : some components (my-toggle-panel , ...)
 
+----------------
+
+"styles": [
+              ...,
+              "./node_modules/d2f-ngx-commons/assets/css/d2f-common-layout.css",
+              "src/styles.scss"
+            ],
+dans angular.json
+
 ================
 #si utilisation de npm link alors besoin d'ajouter   "preserveSymlinks": true dans "angularCompilerOptions": { }
 #de tsconfig.json , mais comme plein de bugs/limitations pas de npm link
+
+==================
+pour prendre en compte une nouvelle version d'une librairie:
+- si version temporaire en developpement (pas vraiment changée dans package.json):
+    * arrêter ng-serve
+    * npm update d2f-ngx-xyz (avec ng serve arrêté)
+    * supprimer le cache angular (répertoire .angular)
+    * relancer ng-serve
+- si changement de version officialisée dans package.json :
+    * arrêter ng-serve
+    * modifier la version dans package.json
+    * npm install (avec ng serve arrêté)
+    * supprimer le cache angular (répertoire .angular)
+    * relancer ng-serve

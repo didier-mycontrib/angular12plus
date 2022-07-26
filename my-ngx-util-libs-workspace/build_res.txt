@@ -1,0 +1,25 @@
+Building Angular Package
+
+------------------------------------------------------------------------------
+Building entry point 'd2f-ngx-layout'
+------------------------------------------------------------------------------
+- Compiling with Angular sources in Ivy partial compilation mode.
+√ Compiling with Angular sources in Ivy partial compilation mode.
+- Generating FESM2020
+√ Generating FESM2020
+- Generating FESM2015
+√ Generating FESM2015
+- Copying assets
+√ Copying assets
+- Writing package manifest
+√ Writing package manifest
+√ Built d2f-ngx-layout
+
+------------------------------------------------------------------------------
+Built Angular Package
+ - from: C:\tp\local-git-mycontrib-repositories\angular12plus\my-ngx-util-libs-workspace\projects\d2f-ngx-layout
+ - to:   C:\tp\local-git-mycontrib-repositories\angular12plus\my-ngx-util-libs-workspace\dist\d2f-ngx-layout
+------------------------------------------------------------------------------
+
+Build at: 2022-07-26T22:38:30.751Z - Time: 4795ms
+

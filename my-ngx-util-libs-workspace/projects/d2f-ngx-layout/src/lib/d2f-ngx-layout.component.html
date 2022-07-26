@@ -1,6 +1,8 @@
 <div class="flexAllInColumnDir little-margin">
     <header id="mainStickyHeader" class="stickyHeaderFirstInFlexCol" >
-         <mylayout-sticky-header [title]="title" (togglerMenu)="onTogglerMenu()"></mylayout-sticky-header> <!-- always visible -->
+         <mylayout-sticky-header [title]="title" 
+         [quickMenuDefs]="quickMenuDefs"
+         (togglerMenu)="onTogglerMenu()"></mylayout-sticky-header> <!-- always visible -->
     </header>
     <div class="remainingContentInFlexCol">
       <mat-sidenav-container >
@@ -14,9 +16,10 @@
              <mylayout-main-content></mylayout-main-content> <!-- with router-outlet -->
       </mat-sidenav-content>
       </mat-sidenav-container>
-      <mylayout-legal-footer></mylayout-legal-footer> <!-- no sticky -->
+      <mylayout-legal-footer [legalFooterInnerHtml]="legalFooterInnerHtml" ></mylayout-legal-footer> <!-- no sticky -->
     </div>
     <footer class="stickyFooterLastInFlexCol noDisplayForlargeWidth">
-         <mylayout-sticky-footer></mylayout-sticky-footer> <!-- mobile only , contains quick-menu for mobile -->
+         <mylayout-sticky-footer
+         [quickMenuDefs]="quickMenuDefs" ></mylayout-sticky-footer> <!-- mobile only , contains quick-menu for mobile -->
     </footer>
   </div>

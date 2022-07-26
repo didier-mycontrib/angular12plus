@@ -11,7 +11,7 @@ import { MenuDef } from '../common/data/menu-def';
 export class QuickMenuComponent implements OnInit {
 
   @Input()
-  menuDefs : MenuDef[] = [
+  quickMenuDefs : MenuDef[] = [
     new MenuDef("home","/ngr-home"),
     new MenuDef("login/out","/ngr-login-out")
   ];

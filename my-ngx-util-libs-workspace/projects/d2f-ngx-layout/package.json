@@ -1,6 +1,6 @@
 {
   "name": "d2f-ngx-layout",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author" : "didier defrance",
   "description" : "responsive global layout for  angular projects" ,
   "repository" : {
@@ -11,7 +11,8 @@
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0",
     "@angular/cdk": "^14.0.4",
-    "@angular/material": "^14.0.4"
+    "@angular/material": "^14.0.4",
+    "d2f-ngx-commons": "0.0.4"
   },
   "dependencies": {
     "tslib": "^2.3.0"

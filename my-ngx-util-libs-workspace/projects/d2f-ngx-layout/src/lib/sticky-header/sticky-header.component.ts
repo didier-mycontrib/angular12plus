@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MenuDef } from '../common/data/menu-def';
 
 @Component({
   selector: 'mylayout-sticky-header',
@@ -9,6 +10,10 @@ export class StickyHeaderComponent implements OnInit {
 
   @Input()
   title ="my-angular-app";
+
+  
+  @Input()
+  quickMenuDefs : MenuDef[] = [];
 
   showStatusBar = true;
 

@@ -1,6 +1,6 @@
 {
   "name": "d2f-ngx-crud",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author" : "didier defrance",
   "description" : "generic crud util/component for inheritance in angular projects" ,
   "repository" : {
@@ -10,7 +10,8 @@
   "peerDependencies": {
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0",
-    "@angular/forms": "^14.0.0"
+    "@angular/forms": "^14.0.0",
+    "d2f-ngx-commons": "0.0.4"
   },
   "dependencies": {
     "tslib": "^2.3.0"

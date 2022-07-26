@@ -18,7 +18,16 @@ export class D2fNgxLayoutComponent implements OnInit {
   title ="my-angular-app";
 
   @Input()
+  legalFooterInnerHtml = "my legal footer"
+
+  @Input()
   mainMenuDefs : MenuDef[] = [
+    new MenuDef("home","/ngr-home"),
+    new MenuDef("login-out","/ngr-login-out")
+  ];
+
+  @Input()
+  quickMenuDefs : MenuDef[] =[
     new MenuDef("home","/ngr-home"),
     new MenuDef("login-out","/ngr-login-out")
   ];

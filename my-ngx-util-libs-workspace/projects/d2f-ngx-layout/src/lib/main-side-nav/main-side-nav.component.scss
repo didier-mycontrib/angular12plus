@@ -1,4 +1,4 @@
-@import "/assets/css/d2f-common-layout.css";
+/*@import "/assets/css/d2f-common-layout.css"; now as project global css */
 
 .flexRowNoWrap {
     align-items : stretch !important; /* redefinition , not center nor start nor end here */
@@ -16,13 +16,13 @@
 
 .main-level-menu{
   /* border : 1px solid red;*/
-  padding-left: 0em;
-  padding-right: 0.5em;
+  padding-left: 0.2em;
+  padding-right: 0.4em;
 }
 
 .sub-level-menu{
     border-left : 1px solid blue;
-    padding-left: 0.5em;
+    padding-left: 0.4em;
     padding-right: 0.2em;
 }
 
@@ -33,3 +33,7 @@
     margin-bottom: 0.2em;
     text-align: left;
 }
+
+.degradeDeGrisClair {
+    background: linear-gradient(to bottom  , rgba(245, 245, 245, 0.9) , rgba(180, 180, 180, 0.9));
+  }

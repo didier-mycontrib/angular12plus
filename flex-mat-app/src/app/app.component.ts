@@ -9,6 +9,8 @@ import { MenuDef } from 'd2f-ngx-layout';
 export class AppComponent {
   title = 'flex-mat-app';
 
+  legalFooterInnerHtml ="this app legal footer"
+
   appMenuDefs : MenuDef[] = [
     new MenuDef("home","/ngr-home"),
     new MenuDef("public ...",null,[
@@ -20,6 +22,11 @@ export class AppComponent {
       new MenuDef("admin xx","/ngr-admin-xx"),
       new MenuDef("admin yy","/ngr-admin-yy"),
     ])
+  ];
+
+  quickMenuDefs : MenuDef[] = [
+      new MenuDef("demo","/ngr-demo"),
+      new MenuDef("basic","/ngr-basic"),
   ];
 
 }
