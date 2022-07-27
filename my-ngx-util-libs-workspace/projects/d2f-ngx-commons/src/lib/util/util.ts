@@ -13,7 +13,7 @@ export function messageFromError(err : HttpErrorResponse , myMsg /*: string*/ = 
     return message;
   }
 
-  export function cloneObjectWithoutMethod(obj:any):any{
+  export function cloneObject(obj:any):any{
     return JSON.parse(JSON.stringify(obj));
   }
 
@@ -22,10 +22,4 @@ export function messageFromError(err : HttpErrorResponse , myMsg /*: string*/ = 
     for(let key of arrayOfPropKeys){
      Reflect.set(target, key, Reflect.get(source,key));
     }
-   }
-
-   export function objectWithMethodsOfProto(objectWithoutMethods : object, protoWithMethods : object ):any{
-    //!!! NB: protoWithMethods is modified here (should be as new created instance)!!!
-    copyObjectProperties(objectWithoutMethods ,protoWithMethods);
-    return protoWithMethods; //modified with good data values
    }

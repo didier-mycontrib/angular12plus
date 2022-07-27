@@ -4,7 +4,7 @@
         <div class="flexRowNoWrap ">
             <span class="flexItem left-text-align withLeftPadding"
                 (click)="onTogglerMenuClick()">
-                <mat-icon>view_headline</mat-icon>
+                <mat-icon class="customIconSize">view_headline</mat-icon>
               </span> 
             <span class="flexItem center-text-align highlight title">{{title}}</span>  
             <mylayout-quick-toolbar (statusHelp)="onStatusHelp()" class="withRightPadding"></mylayout-quick-toolbar> 
@@ -13,7 +13,7 @@
       <div class="flexItem center-text-align ">
         <div class="flexRowNoWrap">
           <mylayout-status-bar *ngIf="showStatusBar" class="flexItem" ></mylayout-status-bar>
-          <mylayout-quick-menu class="flexItem noDisplayForSmallWidth"
+          <mylayout-quick-menu class="flexItem noDisplayForSmallWidth withRightMargin"
           [quickMenuDefs]="quickMenuDefs" ></mylayout-quick-menu>
         </div>
      </div>

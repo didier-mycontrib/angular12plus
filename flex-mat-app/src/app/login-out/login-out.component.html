@@ -1,16 +1,16 @@
 <h2>login-out</h2>
 <hr/>
-<div *ngIf="userSession.isConnected()">
+<div *ngIf="userSessionEx.isConnected()">
    <h3 class="connected">you are connected</h3>
-   <p *ngIf="userSession.userId && userSession.userId != '' && userSession.userId != '?'">userId: <span >{{userSession.userId}}</span></p>
-   <p>userName: <span class="highlight">{{userSession.userName}}</span></p>
-   <p *ngIf="userSession.userRoles.length >0" >userRoles: <span class="highlight">{{userSession.userRoles.join(',')}}</span></p>
-   <p *ngIf="userSession.authToken">authToken: <span>{{userSession.authToken}}</span></p>
-   <p *ngIf="userSession.userDetails">details: <span>{{userSession.userDetails}}</span></p>
+   <p *ngIf="userSessionEx.userId && userSessionEx.userId != '' && userSessionEx.userId != '?'">userId: <span >{{userSessionEx.userId}}</span></p>
+   <p>userName: <span class="highlight">{{userSessionEx.userName}}</span></p>
+   <p *ngIf="userSessionEx.userRoles.length >0" >userRoles: <span class="highlight">{{userSessionEx.userRoles.join(',')}}</span></p>
+   <p *ngIf="userSessionEx.authToken">authToken: <span>{{userSessionEx.authToken}}</span></p>
+   <p *ngIf="userSessionEx.userDetails">details: <span>{{userSessionEx.userDetails}}</span></p>
    <p><button (click)="onLogout()">logout</button></p>
 </div>
 
-<div *ngIf="!userSession.isConnected()" class="m-1">
+<div *ngIf="!userSessionEx.isConnected()" class="m-1">
     <h3 class="disconnected">you are not yet connected</h3>
     <form #formLogin="ngForm">
         <div class="flexRowWrap">
@@ -42,5 +42,5 @@
 </div>
 <!--
 <hr/>
-<p>userSession: {{userSession | json}}</p>
+<p>userSession: {{userSessionEx | json}}</p>
 -->

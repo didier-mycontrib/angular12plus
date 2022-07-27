@@ -1,4 +1,23 @@
-@import "d2f-layout-common-media-query.css";
+/*
+IMPORTANT : ce fichier de styles scss reutilisables est prevu 
+pour integre en mode @import dans de futures applications "angular"
+via 
+"stylePreprocessorOptions": {
+              "includePaths": [
+                "node-modules/d2f-ngx-commons/assets/scss"
+                "other_path_of_lower_priority/assets/scss" 
+              ]
+            }
+de angular.json de ces applications
+
+il suffit ensuite d'ajouter 
+@import "d2f-common-base"; 
+dans le haut d'un fichier xyz.component.scss 
+(existant dans une autre libraire d2f-ngx-xyz ou bien à créer dans l'application)
+
+*/
+
+@import "d2f-layout-common-media-query";
 
 .mt-1{
     margin-top: 0.25em;

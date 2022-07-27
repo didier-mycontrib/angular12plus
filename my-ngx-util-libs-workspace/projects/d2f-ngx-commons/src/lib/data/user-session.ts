@@ -1,3 +1,9 @@
+/* utility classes for maintaining User informations in a angular application
+   UserSession will be stored in memory or sessionStorage after login of user
+   UserSessionEx wrapper class will be use by gardians or status bar
+*/
+
+//basic UserSession class without method (can be easily cloned and stored in sessionStorage)
 export class UserSession{
     constructor(
        public userId : string ="?" /* uuid or num or userName or ... */,
@@ -6,6 +12,19 @@ export class UserSession{
        public authToken : string | null = null /* null is not connected */,
        public userDetails : object | null = null
     ){}
+}
+
+//extended UserSessionEx with methods (as a wrapper class)
+export class UserSessionEx extends UserSession{
+
+  constructor(userSession: UserSession | undefined){
+    super(userSession?.userId,
+          userSession?.userName,
+          userSession?.userRoles,
+          userSession?.authToken,
+          userSession?.userDetails
+          );
+  }
 
     hasRole(role:string):boolean{
         return this.userRoles.includes(role);

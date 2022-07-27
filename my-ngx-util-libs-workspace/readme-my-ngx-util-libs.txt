@@ -47,3 +47,36 @@ npm install -s d2f-ngx-layout (si publié sur référentiel npm)
 
 quelquepart (dans composant ):
 import { ... } from 'd2f-ngx-commons';
+
+
+---------------------
+old test-app config in angular.json:
+"styles": [
+              "projects/test-app/src/styles.scss",
+              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/d2f-ngx-commons/assets/css/d2f-common-layout.css"
+            ],
+new test-app config in angular.json:
+"stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/d2f-ngx-commons/assets/scss/",
+                "node_modules/d2f-ngx-commons/assets/scss"
+              ]
+            },
+
+---------------------
+NB:
+in each ng-package.json of d2f-ngx-xyz library (but not  d2f-ngx-commons)
+{
+  ...,
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "styleIncludePaths": [
+      "../d2f-ngx-commons/assets/scss"
+     ]
+  }
+}
+in order to find .scss to import during ng build of library
+Unfortunately , .scss are transformed in static css
+during the phase of library building.
+values of scss variables must be set at this stage , not after !

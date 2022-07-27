@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BasicComponent } from './basic/basic.component';
 import { DemoComponent } from './demo/demo.component';
 import { HomeComponent } from './home/home.component';
 import { LoginOutComponent } from './login-out/login-out.component';
@@ -7,6 +8,7 @@ import { LoginOutComponent } from './login-out/login-out.component';
 const routes: Routes = [
   { path: 'ngr-home', component: HomeComponent },
   { path: 'ngr-demo', component: DemoComponent },
+  { path: 'ngr-basic', component: BasicComponent },
   { path: 'ngr-login-out', component: LoginOutComponent },
   { path: '', redirectTo: '/ngr-home', pathMatch: 'full'}
 ];

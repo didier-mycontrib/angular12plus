@@ -1,7 +1,7 @@
 Building Angular Package
 
 ------------------------------------------------------------------------------
-Building entry point 'd2f-ngx-layout'
+Building entry point 'd2f-ngx-components'
 ------------------------------------------------------------------------------
 - Compiling with Angular sources in Ivy partial compilation mode.
 √ Compiling with Angular sources in Ivy partial compilation mode.
@@ -13,13 +13,13 @@ Building entry point 'd2f-ngx-layout'
 √ Copying assets
 - Writing package manifest
 √ Writing package manifest
-√ Built d2f-ngx-layout
+√ Built d2f-ngx-components
 
 ------------------------------------------------------------------------------
 Built Angular Package
- - from: C:\tp\local-git-mycontrib-repositories\angular12plus\my-ngx-util-libs-workspace\projects\d2f-ngx-layout
- - to:   C:\tp\local-git-mycontrib-repositories\angular12plus\my-ngx-util-libs-workspace\dist\d2f-ngx-layout
+ - from: C:\tp\local-git-mycontrib-repositories\angular12plus\my-ngx-util-libs-workspace\projects\d2f-ngx-components
+ - to:   C:\tp\local-git-mycontrib-repositories\angular12plus\my-ngx-util-libs-workspace\dist\d2f-ngx-components
 ------------------------------------------------------------------------------
 
-Build at: 2022-07-26T22:38:30.751Z - Time: 4795ms
+Build at: 2022-07-27T16:40:57.154Z - Time: 3912ms
 

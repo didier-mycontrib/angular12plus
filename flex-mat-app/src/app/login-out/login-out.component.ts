@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserSession , UserSessionService } from 'd2f-ngx-commons';
+import { UserSession , UserSessionEx, UserSessionService } from 'd2f-ngx-commons';
 import { Login } from '../common/data/login';
 
 @Component({
@@ -11,12 +11,12 @@ export class LoginOutComponent implements OnInit {
 
   constructor(public userSessionService : UserSessionService) { }
 
-  userSession  = new UserSession();
+  userSessionEx  = new UserSessionEx(undefined);
   login  = new Login();
 
   ngOnInit(): void {
     this.userSessionService.bsUserSession$.subscribe(
-      (userSession)=>this.userSession=userSession
+      (userSession)=>this.userSessionEx=new UserSessionEx(userSession)
     )
     //console.log("LoginOutComponent/ngOnInit , login:"+JSON.stringify(this.login));
   }
@@ -28,11 +28,11 @@ export class LoginOutComponent implements OnInit {
 
   onLogin(){
     //v1 : without ckeck password , without server:
-    this.userSession  = new UserSession();
-    this.userSession.userRolesAsString = this.login.roles;
-    this.userSession.userName = this.login.username;
-    this.userSession.authToken = "bearerTokenForConnectedUser";
-    this.userSessionService.setUserSession(this.userSession);
+    this.userSessionEx  = new UserSessionEx(undefined);
+    this.userSessionEx.userRolesAsString = this.login.roles;
+    this.userSessionEx.userName = this.login.username;
+    this.userSessionEx.authToken = "bearerTokenForConnectedUser";
+    this.userSessionService.setUserSession(this.userSessionEx);
   }
 
 }

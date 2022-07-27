@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserSession , UserSessionService } from 'd2f-ngx-commons';
+import { UserSession , UserSessionEx , UserSessionService } from 'd2f-ngx-commons';
 
 @Component({
   selector: 'mylayout-status-bar',
@@ -10,13 +10,13 @@ export class StatusBarComponent implements OnInit {
 
   constructor(public userSessionService : UserSessionService) { }
 
-  userSession : UserSession = new UserSession();
+  userSessionEx : UserSessionEx = new UserSessionEx(undefined);
 
   ngOnInit(): void {
     this.userSessionService.bsUserSession$.subscribe(
       (userSession)=>{
-        this.userSession=userSession;
-       // console.log("StatusBarComponent , userSession="+JSON.stringify(this.userSession))
+        this.userSessionEx=new UserSessionEx(userSession);
+       // console.log("StatusBarComponent , userSessionEx="+JSON.stringify(this.userSessionEx))
       }
     )
   }

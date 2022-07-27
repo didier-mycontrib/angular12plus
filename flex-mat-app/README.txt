@@ -25,13 +25,20 @@ d2f-ngx-crud module : abstract crud component
 d2f-ngx-components module : some components (my-toggle-panel , ...)
 
 ----------------
-
+old app config in angular.json:
 "styles": [
               ...,
               "./node_modules/d2f-ngx-commons/assets/css/d2f-common-layout.css",
               "src/styles.scss"
             ],
-dans angular.json
+
+new app config in angular.json:
+"stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/scss",
+                "node_modules/d2f-ngx-commons/assets/scss"
+              ]
+            },
 
 ================
 #si utilisation de npm link alors besoin d'ajouter   "preserveSymlinks": true dans "angularCompilerOptions": { }

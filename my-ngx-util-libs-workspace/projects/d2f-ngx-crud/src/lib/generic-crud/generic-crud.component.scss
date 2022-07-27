@@ -1,4 +1,16 @@
-@import "/assets/css/d2f-common-layout.css";
+/* old @import "/assets/css/d2f-common-layout.css"; temporary used as global style  */
+@import "d2f-common-layout"; /* should be provided by using app in stylePreprocessorOptions/includePaths of angular.json */
+/*NB: @import "xyz" will import ./xyz.scss if exists at first priority 
+if ./xyz.scss doesnt exist , xyz.scss will be search in all paths 
+of "stylePreprocessorOptions": {
+              "includePaths": [
+                "node-modules/d2f-ngx-commons/assets/scss"
+                "other_path_of_lower_priority/assets/scss" 
+              ]
+            }
+of angular.json file of app using this library .
+if several paths , first found is used , others are ignored .
+*/
 
 .flexRowWrap {
     align-items : stretch !important; /* redefinition , not center nor start nor end here */

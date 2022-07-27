@@ -2,6 +2,9 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/d2f-ngx-components",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/public-api.ts",
+    "styleIncludePaths": [
+      "../d2f-ngx-commons/assets/scss"
+     ]
   }
 }

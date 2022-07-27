@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { UserSession } from '../data/user-session';
-import { objectWithMethodsOfProto } from '../util/util';
+
 
 /* user session in this angular frontEnd App */
 
@@ -51,8 +51,7 @@ export class UserSessionService extends GenericUserSessionService {
   }
 
   constructor() { super(); 
-    let userSession = objectWithMethodsOfProto(this.retreiveSessionValue("userSession",new UserSession()/*default_values*/),
-                                               new UserSession()/*prototype of class with methods*/);
+    let userSession = this.retreiveSessionValue("userSession",new UserSession()/*default_values*/);
     this._bsUserSession$.next(userSession);
   }
 }
