@@ -31,3 +31,4 @@ est 0.0.n alors en phase de dev (sur local-verdaccio ) : 0.0.N+1
 npm set registry https://registry.npmjs.org
 
 //npm version patch //for incrementing version 0.0.n 0.0.n+1
+-----
