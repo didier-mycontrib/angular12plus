@@ -1,0 +1,51 @@
+<p>with-ng-template</p>
+<input type="checkbox" [(ngModel)]="ready" />ready <br/>
+
+<!-- *ngIf="booleanExpression else alternativeTemplate" -->
+<div *ngIf="ready else notReady">
+    ready / done !
+</div>
+
+<ng-template #notReady>
+    waiting (not ready)
+</ng-template>
+
+<!-- ng-container peut etre vu comme une div virtuelle
+     avec possibilite de *ngIf="..." sans niveau d'imbrication
+    supplémentaire  -->
+
+<ng-template #loading>
+    <p>loading...</p>
+</ng-template>  
+
+<ng-template #details>
+    <p>details...</p>
+</ng-template> 
+
+<ng-container *ngTemplateOutlet="loading"></ng-container> <!--affiche a cet endroit le template #loading-->
+<ng-container *ngTemplateOutlet="loading"></ng-container>
+<!-- <ng-container *ngTemplateOutlet="unknown"></ng-container> with errors -->
+
+<hr/>
+<h4>templateAvecContexte</h4>
+<ng-template #templateAvecContexte let-code="code" let-label="label">
+    <!-- via let-code="code" au sein de ce template la variable code
+         aura la valeur de la sous partie ".code" d'un objet javascript 
+         interchangeable appelé context -->
+    <div> code={{code}} label={{label}}</div>
+</ng-template>
+<ng-container 
+   *ngTemplateOutlet="templateAvecContexte;context:ctxSemaine">
+</ng-container>
+<ng-container 
+   *ngTemplateOutlet="templateAvecContexte;context:ctxWeekEnd">
+</ng-container>
+<hr/>
+<h4>sous composant avec TemplateRef</h4>
+<app-panel-with-template-ref>
+    panel with defaultHeader and defaultFooter
+</app-panel-with-template-ref>
+<br/>
+<app-panel-with-template-ref [headerTemplate]="details" [footerTemplate]="loading">
+    panel with details template as Header and loading template as Footer
+</app-panel-with-template-ref>

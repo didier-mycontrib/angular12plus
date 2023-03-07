@@ -1,0 +1,9 @@
+<p>dyn-form works!</p>
+<app-dynamic-form [formModel]="myFormModel"
+ (submitValues)="onSubmitValues($event)"></app-dynamic-form>
+ <hr/>
+ {{message}}
+
+ <hr/>
+ <h2>static my-reactive-form:</h2>
+ <app-my-reactive-form></app-my-reactive-form>

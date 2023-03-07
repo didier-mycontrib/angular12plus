@@ -1,0 +1,54 @@
+<p>with-content works!</p>
+<app-my-tabset>
+    <!-- V1
+    <app-my-tab title="tab1">
+        <div #tabContent >div_a</div>
+    </app-my-tab>
+    <app-my-tab title="tab2">
+        <div #tabContent >div_b</div>
+    </app-my-tab>
+    <app-my-tab title="tab3">
+        <div #tabContent >div_c</div>
+    </app-my-tab>
+    -->
+    <!-- V2 
+    <app-my-tab title="tab1" [tabTemplate]="tab1Template">
+        <ng-template #tab1Template><div>div_a</div></ng-template> 
+    </app-my-tab>
+    <app-my-tab title="tab2" [tabTemplate]="tab2Template">
+        <ng-template #tab2Template><div>div_b</div></ng-template>
+    </app-my-tab>
+    <app-my-tab title="tab3" [tabTemplate]="tab3Template">
+        <ng-template #tab3Template><div>div_c</div></ng-template>
+    </app-my-tab>
+    <app-my-tab title="tab4" [tabTemplate]="tab4Template">
+        <ng-template #tab4Template><div><app-welcome></app-welcome></div></ng-template>
+    </app-my-tab>
+    -->
+    <!-- V3
+    <app-my-tab title="tab1" >
+        <ng-template><div>div_a</div></ng-template> 
+    </app-my-tab>
+    <app-my-tab title="tab2" >
+        <ng-template><div>div_b</div></ng-template>
+    </app-my-tab>
+    <app-my-tab title="tab3">
+        <ng-template><div>div_c</div></ng-template>
+    </app-my-tab>
+    <app-my-tab title="tab4" >
+        <ng-template><app-welcome></app-welcome></ng-template>
+    </app-my-tab>
+    -->
+    <app-my-tab title="tab1" >
+        <div>div_a</div>
+    </app-my-tab>
+    <app-my-tab title="tab2" >
+        <div>div_b</div>
+    </app-my-tab>
+    <app-my-tab title="tab3">
+        <div>div_c</div>
+    </app-my-tab>
+    <app-my-tab title="tab4" >
+        <app-welcome></app-welcome>
+    </app-my-tab>
+</app-my-tabset>

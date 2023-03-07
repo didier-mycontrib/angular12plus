@@ -1,0 +1,9 @@
+<ng-template #ok ><span class="ok">_</span></ng-template>
+
+<span *ngIf="formName.controls[fieldName].invalid && (formName.controls[fieldName].dirty || formName.controls[fieldName].touched) else ok"
+     class="error">
+     <div class="mytooltip">x
+        <span class="mytooltiptext">{{errorMessage()}}</span>
+      </div> 
+</span>
+

@@ -1,0 +1,11 @@
+<form [formGroup]="formName" class="flexRowWrap mb-">
+    <label class="f-align"></label>
+    <div class="f-align">
+        <input
+                type="checkbox"
+                [name]="field.fieldName"
+                [formControlName]="field.fieldName"
+                [value]="field.value"
+        />{{ field.label }}
+    </div>
+</form>

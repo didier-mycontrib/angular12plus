@@ -1,0 +1,9 @@
+<ng-template #defaultTabContent>
+    <div>defaultTabContent</div>
+</ng-template>
+
+<ng-content></ng-content> <!-- will display tabs titles-->
+<br/>
+<!-- {{selectedTabContent}} -->
+
+<ng-container *ngTemplateOutlet="selectedTabTemplateRef?selectedTabTemplateRef:defaultTabContent"></ng-container>

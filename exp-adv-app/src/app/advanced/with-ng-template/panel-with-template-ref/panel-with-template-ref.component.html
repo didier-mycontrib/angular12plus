@@ -1,0 +1,13 @@
+<ng-template #defaultHeader>
+    <div>defaultHeader</div>
+</ng-template>
+
+<ng-template #defaultFooter>
+    <div>defaultFooter</div>
+</ng-template>
+
+<div class="withBorder">
+    <ng-container *ngTemplateOutlet="headerTemplate?headerTemplate:defaultHeader"></ng-container>
+    <ng-content></ng-content>
+    <ng-container *ngTemplateOutlet="footerTemplate?footerTemplate:defaultFooter"></ng-container>
+</div>

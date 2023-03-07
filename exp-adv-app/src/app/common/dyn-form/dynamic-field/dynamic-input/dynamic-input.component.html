@@ -1,0 +1,7 @@
+<form [formGroup]="formName" class="flexRowWrap mb-1">
+    <label class="f-align">{{field.label}} : </label>
+    <div class="f-align">
+       <input class="f-max-size  mb-1" [type]="field.type" [formControlName]="field.fieldName"/>
+    </div>
+    <app-dynamic-error class="f-align-error" [fieldName]="field.fieldName"></app-dynamic-error>
+</form>

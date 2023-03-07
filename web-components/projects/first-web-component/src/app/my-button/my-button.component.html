@@ -1,0 +1,7 @@
+<div class="toggle-button" [class.active]="active" (click)="toggle()">
+    <span>{{prefix}}</span> 
+    <slot>
+        <!-- html webComponent slot is like angular <ng-content> 
+             it will be replaced by innerHTML of webComponent -->
+    </slot>
+</div>

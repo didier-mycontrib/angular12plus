@@ -1,0 +1,10 @@
+<p>login </p>
+username : <input [(ngModel)]="login.username" /> <br/>
+password : <input [(ngModel)]="login.password" /> <br/>
+roles : <input [(ngModel)]="login.roles" /> <br/>
+<button (click)="onLogin()">login</button> &nbsp;
+<button (click)="onLogout()">logout</button>
+<hr/>
+message: {{message}} <br/>
+userSession : {{userSession$ | async | json}}
+<hr/>

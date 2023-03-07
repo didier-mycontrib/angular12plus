@@ -1,0 +1,22 @@
+<p>my-reactive-form works!</p>
+<h1>Register</h1>
+<form [formGroup]="registerForm"> 
+  <label>Name:</label><input type="text" formControlName="name" /> <br/>
+</form>
+<form [formGroup]="registerForm">
+  <label>LastName:</label> <input type="text" formControlName="lastName" /><br/>
+</form>
+<form [formGroup]="registerForm">
+  <label> Age:</label> <input type="number" formControlName="age" /><br/>
+</form>
+<form [formGroup]="registerForm">
+  <button (click)="onSubmit()"
+           [disabled]="!registerForm.valid">submit</button>
+</form>
+<hr/>
+{{message}}
+
+<!-- 
+un seul bloc <form [formGroup]="registerForm"> .... </form>
+ou plusieurs blocs complémentaires
+-->

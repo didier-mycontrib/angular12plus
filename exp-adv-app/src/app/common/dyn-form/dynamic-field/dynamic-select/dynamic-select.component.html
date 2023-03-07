@@ -1,0 +1,10 @@
+<form [formGroup]="formName" class="flexRowWrap mb-1">
+    <label class="f-align">{{field.label}}:</label>
+    <div class="f-align">
+        <select [formControlName]="field.fieldName">
+            <option *ngFor="let option of field.options" [ngValue]="option.value">
+                {{option.label}}
+            </option>
+        </select>
+    </div>
+</form>

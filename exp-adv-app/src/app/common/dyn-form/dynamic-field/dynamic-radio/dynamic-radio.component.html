@@ -1,0 +1,12 @@
+<form [formGroup]="formName" class="flexRowWrap mb-1">
+    <label class="f-align">{{field.label}} : </label>
+    <div class="f-align">
+      <label *ngFor="let option of field.options">
+        <input type="radio"
+                   [name]="field.fieldName"
+                   [formControlName]="field.fieldName"
+                   [value]="option.value"
+            />{{option.label}} &nbsp; 
+     </label>
+    </div>
+</form>

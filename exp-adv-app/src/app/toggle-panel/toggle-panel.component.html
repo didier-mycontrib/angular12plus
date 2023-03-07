@@ -1,0 +1,16 @@
+<div class="my-card">
+	   <h4 class="my-card-header my-bg-primary">
+		   <a class="my-text-light" (click)="toggleP = !toggleP" >
+			<span class="my-icon" [style.display]="toggleP?'none':'inline-block'">+</span>
+			<span class="my-icon" [style.display]="toggleP?'inline-block':'none'">-</span>{{title}}
+		   </a>
+	    </h4>
+	<div class="my-card-body my-collapse" [class.my-show]="toggleP"> 		       
+		   <ng-content></ng-content> 
+		   <!-- ng-content correspond a une transclusion angular 1 
+		   renommee projection angular 2+ .
+		   ce sera automatiquement remplace par le contenu imbrique 
+		   de la basise du composant actuel (ici toggle-panel).
+		   -->
+	</div>
+</div>

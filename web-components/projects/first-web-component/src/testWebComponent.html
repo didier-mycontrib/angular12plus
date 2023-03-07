@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FirstWebComponent</title>
+  <script src="runtime.js" ></script>
+  <script src="polyfills.js" ></script>
+  <script src="main.js" ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h3>FirstWebComponent via angular</h3>
+  <my-button id="myButton"><b>click on Me!</b></my-button>
+  
+  <script>
+  const myButton = document.getElementById('myButton');
+  myButton.prefix = "MyToggleButton - " ; //default value = "MyButton (toogle) -" 
+  myButton.addEventListener('change', (event) => {
+    console.log('change event received , active=event.detail.value=', event.detail.value );
+  });
+
+  setTimeout(() => {
+    myButton.active = true; 
+	myButton.innerHTML= "<i>Touch Me!</i>";
+  }, 3000);
+</script>
+
+</body>
+</html>

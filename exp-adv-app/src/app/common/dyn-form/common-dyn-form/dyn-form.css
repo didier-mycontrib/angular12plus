@@ -1,0 +1,129 @@
+.error { color : #a94442; }
+.ok { color : #42A948; }
+
+input.ng-valid {
+    border-right: 4px solid #42A948; /* green */
+   }
+
+input.ng-invalid {
+    border-right: 4px solid #a94442; /* red */
+}
+
+
+.flexColumnNoWrap {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap : nowrap;
+}
+
+.flexRowNoWrap {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap : nowrap;
+   align-items : center;
+}
+
+.flexColumnWrap {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap : wrap;
+}
+
+.flexRowWrap {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap : wrap;
+    align-items : center;
+}
+
+.flexRowWrap {
+    align-items : stretch !important; /* redefinition , not center nor start nor end here */
+}
+
+
+.flexItem {
+    flex: 1 1 auto;
+	
+}
+
+.left-text-align {
+    text-align: left;
+}
+
+.right-text-align {
+    text-align: right;
+}
+
+.center-text-align {
+    text-align: center;
+}
+
+label.f-align {
+    width: 8em;
+    display: inline-block;
+    margin-left: 0.3em;
+    flex: 0 0 8em;
+  }
+
+  .f-align-error {
+    width: 1em;
+    display: inline-block;
+    margin-left: 0.1em;
+    flex: 0 0 1em;
+  }
+
+  
+  .f-align {
+    margin-left: 0.3em;
+    flex: 1 1 auto;
+  }
+  
+  .f-max-size {
+    width: 95%;
+  }
+
+  /* Tooltip container */
+.mytooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */ /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .mytooltip .mytooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    font-size: x-small;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .mytooltip:hover .mytooltiptext {
+    visibility: visible;
+  }
+
+  .mt-1{
+    margin-top: 0.12em;
+}
+
+.mb-1{
+    margin-bottom: 0.12em;
+}
+
+.m-1{
+    margin: 0.12em;
+}
+
+.p-1{
+    padding: 0.12em;
+}

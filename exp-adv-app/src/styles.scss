@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+input[required].ng-valid {
+    border-right: 4px solid #42A948; /* green */
+   }
+
+input.ng-invalid {
+    border-right: 4px solid #a94442; /* red */
+}

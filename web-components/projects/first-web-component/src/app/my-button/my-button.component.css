@@ -1,0 +1,10 @@
+.toggle-button {
+    padding:10px;
+    border: solid black 1px;
+    cursor: pointer;
+    display: inline
+  }
+
+  .active {
+    background-color: lightblue;
+  }

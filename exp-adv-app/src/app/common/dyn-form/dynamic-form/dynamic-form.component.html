@@ -1,0 +1,16 @@
+<form [formGroup]="dynamicFormGroup">
+    <div *ngFor="let field of fields">
+        <!-- app-field-input will be dynamically replaced by a specific sort 
+            (dynamic-input , dynamic-radio , dynamic-select , dynamic-checbox )
+            switch by field.type 
+        -->
+        <app-field-input [field]="field"></app-field-input>
+    </div>
+    <div class="flexRowWrap">
+        <label class="f-align"></label>
+        <div class="f-align">
+        <button  (click)="onSubmit()"
+            [disabled]="!dynamicFormGroup.valid">submit</button>
+        </div>
+    </div>
+</form>
