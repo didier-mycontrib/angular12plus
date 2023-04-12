@@ -11,7 +11,6 @@ import { MyChartComponent } from './my-chart/my-chart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { WithPopupComponent } from './with-popup/with-popup.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { WithLeafletComponent } from './with-leaflet/with-leaflet.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { WithDynBs5Component } from './with-dyn-bs5/with-dyn-bs5.component'; 
@@ -31,7 +30,6 @@ import { WithDynBs5Component } from './with-dyn-bs5/with-dyn-bs5.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ModalModule.forRoot(),
     NgChartsModule,
     LeafletModule
   ],

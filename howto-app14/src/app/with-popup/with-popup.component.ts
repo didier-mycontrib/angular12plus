@@ -1,6 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { BsModalService , BsModalRef } from 'ngx-bootstrap/modal';
-import { bindCallback } from 'rxjs';
+
 import { TestService } from '../common/service/test.service';
 
 @Component({
@@ -10,15 +9,14 @@ import { TestService } from '../common/service/test.service';
 })
 export class WithPopupComponent implements OnInit {
 
-  modalRef : BsModalRef | null=null; //currentModalRef
+  
   
   dataSample = {
     text: "aaa",
     color : "black"
   }
 
-  constructor(private modalService: BsModalService,
-              private testService : TestService) {}
+  constructor( private testService : TestService) {}
 
   public testAttente(){
     /*
@@ -30,23 +28,7 @@ export class WithPopupComponent implements OnInit {
     );
   }
 
-  openModal(template: TemplateRef<any> , size : "sm" | "md" | "lg" = "md") {
-      this.modalRef = this.modalService.show(template, { /*id: 1,*/ class: 'modal-' + size });
-    }
-  openSmallModal(template: TemplateRef<any> ) {
-    this.openModal(template,"sm");
-  }
-  openLargeModal(template: TemplateRef<any> ) {
-    this.openModal(template,"lg");
-  }
   
-  closeModal() {
-      if (this.modalRef != null) {
-        this.modalRef.hide();
-        this.modalRef = null;
-      }
-  }
-
   ngOnInit(): void {
   }
 

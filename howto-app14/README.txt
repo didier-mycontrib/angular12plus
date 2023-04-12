@@ -8,9 +8,8 @@ avec  "node_modules/bootstrap/dist/css/bootstrap.min.css"
 et eventuellement "node_modules/bootstrap-icons/font/bootstrap-icons.css"
 dans partie "styles": [ ] de angular.json (près ligne 34)
 ==========
-npm install -s ngx-bootstrap 
-(en version 8... en début 2022  compatible bs5 et angular 12/13)
-npm install -s ngx-bootstrap@latest --legacy-peer-deps pour angular 14
+ne plus utiliser ngx-bootstrap avec angular 14,15, ...
+mais @angular/material a la place
 ==========
 npm install -s ng2-charts chart.js
 (chart.js utilisé en interne par ng2-charts)
